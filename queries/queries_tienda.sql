@@ -1,2 +1,11 @@
 SELECT nombre FROM producto;
 SELECT nombre, precio FROM producto;
+SELECT * FROM producto;
+SELECT nombre, precio, precio * 1.02 FROM producto;
+SELECT nombre AS nombre_producto, precio AS euros, precio * 1.02 AS dolares FROM producto;
+SELECT UPPER(nombre), precio FROM producto;
+SELECT LOWER(nombre), precio FROM producto;
+SELECT nombre, UPPER(SUBSTRING(nombre,1,2)) FROM fabricante;
+SELECT nombre, ROUND(precio,0) FROM producto;
+SELECT nombre, TRUNCATE(precio,0) FROM producto;
+SELECT codigo_fabricante FROM producto;
