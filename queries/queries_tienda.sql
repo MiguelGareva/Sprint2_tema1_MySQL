@@ -28,3 +28,14 @@ SELECT * FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fab
 SELECT * FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE fabricante.nombre = "asus" OR fabricante.nombre = "hewlett-packard" OR fabricante.nombre = "seagate";
 SELECT * FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE fabricante.nombre IN ("asus", "hewlett-packard", "seagate");
 SELECT producto.nombre, producto.precio FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE fabricante.nombre LIKE "%e";
+SELECT producto.nombre, producto.precio FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE fabricante.nombre LIKE "%w%";
+SELECT producto.nombre, producto.precio, fabricante.nombre AS nombre_fabricante FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE precio >= 180 ORDER BY precio DESC, producto.nombre ASC;
+SELECT fabricante.codigo, fabricante.nombre FROM fabricante INNER JOIN producto ON fabricante.codigo = producto.codigo_fabricante;
+SELECT fabricante.nombre, producto.nombre AS nombre_producto FROM fabricante LEFT JOIN producto ON fabricante.codigo = producto.codigo_fabricante;
+SELECT * FROM fabricante LEFT JOIN producto ON fabricante.codigo = producto.codigo_fabricante WHERE producto.codigo IS NULL;
+SELECT * FROM producto WHERE codigo_fabricante = (SELECT codigo FROM fabricante WHERE nombre ="lenovo");
+SELECT * FROM producto WHERE precio = (SELECT MAX(precio) FROM producto WHERE codigo_fabricante = (SELECT codigo FROM fabricante WHERE nombre = "lenovo"));
+SELECT producto.nombre FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE fabricante.nombre = "lenovo" ORDER BY producto.precio DESC LIMIT 1;
+SELECT producto.nombre FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE fabricante.nombre = "hewlett-packard" ORDER BY producto.precio ASC LIMIT 1;
+SELECT * FROM producto WHERE producto.precio >= (SELECT MAX(precio) FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE fabricante.nombre = "lenovo");
+SELECT * FROM producto INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo WHERE fabricante.nombre = "asus" AND producto.precio > (SELECT AVG(precio) FROM producto WHERE codigo_fabricante = fabricante.codigo);
