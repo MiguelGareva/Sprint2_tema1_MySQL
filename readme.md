@@ -21,7 +21,7 @@
 
 **<h3>#Descripción ejercicios:</h3>**
     <u><h4> Queries </h4></u>
-    · <a href="queries">Queries tienda</a>: *"Base de dades "Tienda"<br>Tenim les taules "producto" i "fabricante", cadascuna amb els següents camps:<br>- producto (codigo, nombre, precio, codigo_fabricante)<br>- fabricante (codigo, nombre)<br>El preu està en euros(€).<br>El camp 'codigo_fabricante' de l'entitat "producto" es relaciona amb el camp 'codi' de l'entitat "fabricante"."*<br>
+    · <a href="queries/queries_tienda.sql">Queries tienda</a>: *"Base de dades "Tienda"<br>Tenim les taules "producto" i "fabricante", cadascuna amb els següents camps:<br>- producto (codigo, nombre, precio, codigo_fabricante)<br>- fabricante (codigo, nombre)<br>El preu està en euros(€).<br>El camp 'codigo_fabricante' de l'entitat "producto" es relaciona amb el camp 'codi' de l'entitat "fabricante"."*<br>
     · <a href="1.7.2_debug_test_nivell1">Ejercicio 2</a>: *"Practiquem una mica de TDD. Recorda l’exercici 5 del nivell de PHP Bàsics i pensa tests que podries realitzar per provar el seu correcte funcionament. Programa’ls i després ves realitzant el programa a testejar pas a pas segons valides els tests prèviament creats."*<br>
    
     
