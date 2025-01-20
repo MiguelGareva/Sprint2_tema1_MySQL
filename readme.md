@@ -23,6 +23,8 @@
     <u><h4> Queries </h4></u>
     · <a href="queries/queries_tienda.sql">Queries tienda</a>: *"Base de dades "Tienda"<br>Tenim les taules "producto" i "fabricante", cadascuna amb els següents camps:<br>- producto (codigo, nombre, precio, codigo_fabricante)<br>- fabricante (codigo, nombre)<br>El preu està en euros(€).<br>El camp 'codigo_fabricante' de l'entitat "producto" es relaciona amb el camp 'codi' de l'entitat "fabricante"."*<br>
     · <a href="queries/queries_universidad.sql">Queries universidad</a>: *"Si us plau, descàrrega la base de dades del fitxer schema_universidad.sql, visualitza el diagrama E-R en un editor i efectua les següents consultes:"*<br>
+    · <a href="estructura_de_datos">Modelo óptica</a>: *"Una òptica, anomenada “Cul d'Ampolla”, vol informatitzar la gestió dels clients/es i vendes d'ulleres."*<br>
+    · <a href="estructura_de_datos">Modelo pizzería</a>: *"T’han contractat per a dissenyar una web que permeti fer comandes de menjar a domicili per Internet."*<br>
    
     
     
