@@ -1,0 +1,2 @@
+SELECT COUNT(productos.id) AS bebidas_vendidas FROM pedidos  INNER JOIN productos  ON pedido.id_productos = producto.id INNER JOIN categoria_pizza  ON producto.id_categoria_pizza = categoria.id INNER JOIN tiendas  ON pedido.id_tienda = tienda.id WHERE productos.tipo_producto = "Bebidas" AND tiendas.localidad = "Barcelona";
+SELECT COUNT(pedidos.id) AS total_pedidos FROM pedidos WHERE id_repartidor = 3;
